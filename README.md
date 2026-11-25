@@ -13,6 +13,7 @@ This repository currently defines the purpose, boundaries, and change process fo
 ## Core documents
 
 - [`SPEC.md`](SPEC.md) — the core protocol definition and initial architectural commitments.
+- [`RFC-TEMPLATE.md`](RFC-TEMPLATE.md) — the starting structure and coordination checklist for new RFCs.
 - [`LICENSE`](LICENSE) — GNU Affero General Public License, version 3 or any later version.
 
 ## Working principles

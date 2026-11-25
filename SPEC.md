@@ -51,6 +51,26 @@ Interoperability should be achieved through explicit stable interfaces, versioni
 
 Early mechanisms are experiments. The project should prefer small, observable, reversible changes and should record what was learned before treating a design as foundational.
 
+### 3.7 Coordination across systems and timescales
+
+When many systems participate in one effort, coordination must remain precise even when participants occupy different locations, environments, or timescales. Relativistic effects and clock differences are not merely implementation details: systems must distinguish local time from a shared coordination timeline, preserve event uncertainty and ordering assumptions, and make clock synchronization, drift, leap behavior, and causality explicit.
+
+The originating statement is preserved verbatim as design input:
+
+> when we have these many systems - and for relativity reasons, when we build ships larger then life the time may be different in different places, but we need precise cordination
+
+A conforming proposal that depends on time MUST define its clock sources, timestamp precision, synchronization assumptions, uncertainty bounds, ordering semantics, behavior during partition or clock failure, and whether an event's time is observed, estimated, or derived. No timestamp alone should be treated as proof of global simultaneity or causal order.
+
+### 3.8 Continuity without assumed hierarchy
+
+The protocol may represent relationships among kinds of beings or systems, but shorthand comparisons must not silently become a ranking of worth, rights, authority, or intelligence. Any such relation must state its dimension, scope, evidence, and uncertainty. Open-ended categories are permitted where the next category is unknown.
+
+The following proposed notation is published as an unresolved, dimension-unspecified prompt rather than a normative hierarchy:
+
+> fish < dino < human < ?
+
+The question mark remains intentionally unresolved. A future RFC may define what is being compared, add other beings or systems, or reject the ordering entirely.
+
 ## 4. Protocol layers
 
 The initial OAG protocol model is divided into layers. The boundaries are proposed and may be revised:
@@ -111,6 +131,22 @@ Each proposed protocol change should include:
 8. unresolved questions and alternatives considered;
 9. a status and decision record.
 
+When starting a new RFC, authors should also create a coordination record before proposing implementation. The record should include:
+
+- an RFC identifier, title, author(s), date, and status;
+- the exact problem and the intended beneficiaries or affected participants;
+- local environments, operators, and system boundaries;
+- clock sources, time scales, synchronization method, precision, uncertainty, and ordering model when time matters;
+- assumptions, dependencies, resource limits, and known failure modes;
+- identity, authority, consent, privacy, safety, and abuse boundaries;
+- interoperability, versioning, migration, recovery, and exit expectations;
+- observed evidence versus inference, proposal, and unknowns;
+- test cases, fixtures, measurements, and acceptance criteria;
+- alternatives considered, dissenting views, unresolved questions, and a review/decision record;
+- publication scope, licensing, and any information that must remain private.
+
+A new RFC should begin from [`RFC-TEMPLATE.md`](RFC-TEMPLATE.md) unless it documents why another structure is more suitable.
+
 Accepted proposals should identify their version, compatibility expectations, and the evidence that justified acceptance. Rejected or superseded proposals should remain discoverable with the reason and replacement pointer.
 
 ### 7.1 The RFC process is itself provisional
@@ -160,3 +196,5 @@ This repository does not currently define:
 ## 11. Initial status
 
 This document is an initial proposed core specification. No implementation conformance is claimed. Future work should create focused RFCs beneath this core specification, connect each claim to evidence, and revise this document when experience demonstrates that its boundaries or process are inadequate.
+
+The coordination and continuity language in sections 3.7 and 3.8 is proposed design input, not an adopted scientific model or claim about the relative value of fish, dinosaurs, humans, or any other beings.
